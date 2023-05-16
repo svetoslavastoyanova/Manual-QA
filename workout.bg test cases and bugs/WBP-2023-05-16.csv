@@ -1,0 +1,1521 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases,parameters
+,,,,,,,,,,,,,,,,,,,,1,,Registration,1
+,,,,,,,,,,,,,,,,,,,,2,,"Login and Logout",1
+,,,,,,,,,,,,,,,,,,,,3,,"Search functionality",1
+,,,,,,,,,,,,,,,,,,,,4,,"Shopping cart",1
+,,,,,,,,,,,,,,,,,,,,5,,"Product page",1
+,,,,,,,,,,,,,,,,,,,,6,,"My profile page",1
+,,,,,,,,,,,,,,,,,,,,7,6,"Edit profile functionality",1
+,,,,,,,,,,,,,,,,,,,,8,6,"Change password functionality",1
+,,,,,,,,,,,,,,,,,,,,10,6,"Edit address functionality",1
+1,"Sign up with valid credentials",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Enter a valid first name, surname,email and phone number
+2. Enter a valid password
+3. Enter a valid password conformation
+4. Check the 'Абонирай се' checkbox
+5. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+
+<br>
+'
+6. Click on the 'Продължете' button
+","1. 
+2. Password should be encrypted
+3. Password conformation should be the same as the password and should be encrypted
+4. Yes option should be selected in the checkbox
+5. 
+6. User should successfully be registered and a welcome email should be send to the user
+","1. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+2. test123
+3. test 123
+4. 
+5. 
+6. 
+",,,1,,Registration,,
+2,"A welcome email is being send after registration",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open your mail
+2. Check if a welcome email is sent immediately after successful registration
+3. Check that the email subject line clearly indicates that it is a welcome email
+4. Check that all links in the email are working and correctly direct the user to the website
+","1. 
+2. 
+3. 
+4. 
+","1. 
+2. 
+3. 
+4. 
+",,,1,,Registration,,
+3,"Sign up with an invalid first name",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter an invalid first name
+2. Enter a valid surname,email and phone number
+3. Enter a valid password and password conformation
+4. Check the 'Абонирай се' checkbox
+5. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+6. Click on the 'Продължете' button
+","1. First name field should accept only letters
+2. 
+3. Passwords should be encrypted
+4. Yes option should be selected in the checkbox
+5. 
+6. Error message should be displayed and the registration shouldn't be successful
+","1. 1234
+2. Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+3. test123
+test123
+4. 
+5. 
+6. 
+",,,1,,Registration,,
+4,"Sign up with an invalid surname",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter an invalid surname
+2. Enter a valid first name,email and phone number
+3. Enter a valid password and password conformation
+4. Check the 'Абонирай се' checkbox
+5. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+6. Click on the 'Продължете' button
+","1. Surname field should accept only letters
+2. 
+3. Passwords should be encrypted
+4. Yes option should be selected in the checkbox
+5. 
+6. Error message should be displayed and the registration shouldn't be successful
+","1. 1234
+2. Име: Svetoslava
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+3. test123
+test123
+4. 
+5. 
+6. 
+",,,1,,Registration,,
+5,"Sign up with an invalid email",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter an invalid email
+2. Enter a valid first name,surname and phone number
+3. Enter a valid password and password conformation
+4. Check the 'Абонирай се' checkbox
+5. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+6. Click on the 'Продължете' button
+","1. Email field should accept only valid email formats
+2. 
+3. Passwords should be encrypted
+4. Yes option should be selected in the checkbox
+5. 
+6. Error message should be displayed and the registration shouldn't be successful
+","1. svetoslava
+2. Име: Svetoslava
+Фамилия: Stoyanova
+Телефон: 13183442908
+3. test123
+test123
+4. 
+5. 
+6. 
+",,,1,,Registration,,
+6,"Sign up with an invalid phone number",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter an invalid phone number
+2. Enter a valid first name,surname and email
+3. Enter a valid password and password conformation
+4. Check the 'Абонирай се' checkbox
+5. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+6. Click on the 'Продължете' button
+","1. Phone number field should accept only digits
+2. 
+3. Passwords should be encrypted
+4. Yes option should be selected in the checkbox
+5. 
+6. Error message should be displayed and the registration shouldn't be successful
+","1. svetoslava
+2. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+3. test123
+test123
+4. 
+5. 
+6. 
+",,,1,,Registration,,
+7,"Sign up with a very short password",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid first name,surname, email, phone number and password conformation
+2. Enter a password with only one character
+3. Check the 'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. Passwords must be between 4 and 20 characters
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+2. t
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+8,"Sign up with a very long password",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid first name,surname, email, phone number and password conformation
+2. Enter a password with 21 chracters
+3. Check the 'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. Passwords must be between 4 and 20 characters
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+2. teeeeeeeeeeeeeeeeeeee
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+9,"Sign up with unchecked 'GDPR' agreement",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid first name,surname, email, phone number, password and password conformation
+2. Check the'Абонирай се' checkbox
+3. Leave the 'Прочетох и съм съгласен с Защита за личните данни (GDPR)' uncheked
+4. Click on the 'Продължете' button
+","1. 
+2. Yes option should be selected in the checkbox
+3. 
+4. Error message should be displayed and the registration shouldn't be successful
+","1. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+test123
+2. 
+3. 
+4. 
+",,,1,,Registration,,
+10,"Sign up with a different conformation password",,"1. Open the website 'www.workout.bg'
+2. Click on the profile registration icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid first name,surname, email, phone number and password
+2. Enter a different password in the password conformation field
+3. Check the 'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+2. test
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+11,"Sign up with an empty first name field",,"1. Open the website www.teodor.bg
+2. Click on the profile icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the first name field empty
+2. Enter a valid surname, email, phone number, password and password conformation
+3. Check the'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Име:
+2. Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+test123
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+12,"Sign up with an empty surname field",,"1. Open the website www.teodor.bg
+2. Click on the profile icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the surname field empty
+2. Enter a valid first name, email, phone number, password and password conformation
+3. Check the'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Фамилия:
+2. Име: Svetoslava
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+test123
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+13,"Sign up with an empty email field",,"1. Open the website www.teodor.bg
+2. Click on the profile icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the email field empty
+2. Enter a valid first name, surname, phone number, password and password conformation
+3. Check the'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Ел. поща: svetoslavatest123@abv.bg
+2. Име: Svetoslava
+Фамилия: Stoyanova
+Телефон: 13183442908
+test123
+test123
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+14,"Sign up with an empty phone number field",,"1. Open the website www.teodor.bg
+2. Click on the profile icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the phone number field empty
+2. Enter a valid first name, surname,email, password and password conformation
+3. Check the'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Телефон:
+2. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+test123
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+15,"Sign up with an empty password field",,"1. Open the website www.teodor.bg
+2. Click on the profile icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the password field empty
+2. Enter a valid first name, surname,email and password conformation
+3. Check the'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Парола:
+2. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+16,"Sign up with an empty password conformation field",,"1. Open the website www.teodor.bg
+2. Click on the profile icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the password conformation field empty
+2. Enter a valid first name, surname,email and password
+3. Check the'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Въведи отново паролата:
+2. Име: Svetoslava
+Фамилия: Stoyanova
+Ел. поща: svetoslavatest123@abv.bg
+Телефон: 13183442908
+test123
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+17,"Sign up with an already existing email",,"1. Open the website www.teodor.bg
+2. Click on the profile icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter an already existing email
+2. Enter a valid first name, surname,password and password conformation
+3. Check the'Абонирай се' checkbox
+4. Agree to the GDPR by checking the checkbox 'Прочетох и съм съгласен с Защита за личните данни (GDPR)'
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. Yes option should be selected in the checkbox
+4. 
+5. Error message should be displayed and the registration shouldn't be successful
+","1. Ел. поща: svetoslavatest123@abv.bg
+2. Име: Svetoslava
+Фамилия: Stoyanova
+Телефон: 13183442908
+test123
+test123
+3. 
+4. 
+5. 
+",,,1,,Registration,,
+18,"Login with valid credentials",,"1. Open the website 'workout.bg'
+2. Click on the profile login icon",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Enter a valid email
+2. Enter a valid password
+3. Click on the 'Влез' button
+","1. 
+2. 
+3. User should be successfully logged in
+","1. svetoslavatest123@abv.bg
+2. test123
+3. 
+",,,2,,"Login and Logout",,
+19,"Login with a wrong email",,"1. Open the website 'workout.bg'
+2. Click on the profile login icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a wrong email
+2. Enter a valid password
+3. Click on the 'Влез' button
+","1. 
+2. 
+3. Error message should be displayed and login shouldn't be successful
+","1. svetla@abv.bg
+2. test123
+3. 
+",,,2,,"Login and Logout",,
+20,"Login with an invalid email format",,"1. Open the website 'workout.bg'
+2. Click on the profile login icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter an invalid email format
+2. Enter a valid password
+3. Click on the 'Влез' button
+","1. 
+2. 
+3. Error message should be displayed and login shouldn't be successful
+","1. svetla
+2. test123
+3. 
+",,,2,,"Login and Logout",,
+21,"Login with an empty email field",,"1. Open the website 'workout.bg'
+2. Click on the profile login icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the email field empty
+2. Enter a valid password
+3. Click on the 'Влез' button
+","1. 
+2. 
+3. Error message should be displayed and login shouldn't be successful
+","1. 
+2. test123
+3. 
+",,,2,,"Login and Logout",,
+22,"Login with a wrong password",,"1. Open the website 'workout.bg'
+2. Click on the profile login icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid email
+2. Enter a wrong password
+3. Click on the 'Влез' button
+","1. 
+2. 
+3. Error message should be displayed and login shouldn't be successful
+","1. svetoslavatest123@abv.bg
+2. test124
+3. 
+",,,2,,"Login and Logout",,
+23,"Login with an empty password field",,"1. Open the website 'workout.bg'
+2. Click on the profile login icon",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid email
+2. Leave the password field empty
+3. Click on the 'Влез' button
+","1. 
+2. 
+3. Error message should be displayed and login shouldn't be successful
+","1. svetoslavatest123@abv.bg
+2. 
+3. 
+",,,2,,"Login and Logout",,
+24,"'Забравена парола' functionality works as expected",,"1. Open the website 'workout.bg'",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on the profile login icon
+2. Click on the 'Забравена парола' button
+3. Enter a valid email in the 'Имейл адрес' field
+4. Click on the 'Продължете' button
+","1. 
+2. A new page for forgotten password should be opened
+3. 
+4. A message should be displayed and an email should be sent tot he user's mail
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Login and Logout",,
+25,"Password reset link works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the 'Нова парола' link sent to the mail
+2. Enter a new password in the password field
+3. Enter the same password in the password conformation link
+4. Click on the 'Продължете' button
+","1. Link should be successfully opened and redirecting to a change password page
+2. 
+3. 
+4. Password should be successfully changed and a message should be displayed
+","1. 
+2. 
+3. 
+4. 
+",,,2,,"Login and Logout",,
+26,"Entering a wrong email in the 'Забравена парола' email field displays an error",,"1. Open the website 'workout.bg'",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Click on the profile login icon
+2. Enter a wrong email in the 'Имейл адрес' field
+3. Click on the 'Продължете' button
+","1. 
+2. 
+3. An error message should be displayed
+","1. 
+2. svetoslava
+3. 
+",,,2,,"Login and Logout",,
+27,"Leaving the 'Забравена парола'email field empty displays an error",,"1. Open the website 'workout.bg'",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Click on the profile login icon
+2. Leave the 'Имейл адрес' field empty
+3. Click on the 'Продължете' button
+","1. 
+2. 
+3. An error message should be displayed
+","1. 
+2. svetoslava
+3. 
+",,,2,,"Login and Logout",,
+28,"Entering a very short password in the new password field displays an error",,,,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Open the 'Нова парола' link sent to the mail
+2. Enter only 3 characters in the 'Парола' and 'Потвърди' fields
+3. Click on the 'Продължете' button
+","1. Link should be successfully opened and redirecting to a change password page
+2. Password should be between 4 and 20 symbols long to be accepted
+3. An error message should be displayed
+","1. 
+2. svetoslava
+3. 
+",,,2,,"Login and Logout",,
+29,"Leaving the new password field empty displays and error",,,,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Open the 'Нова парола' link sent to the mail
+2. Leave the 'Парола' and 'Потвърди' fields empty
+3. Click on the 'Продължете' button
+","1. Link should be successfully opened and redirecting to a change password page
+2. Password fields shouldn't be left empty
+3. An error message should be displayed
+","1. 
+2. svetoslava
+3. 
+",,,2,,"Login and Logout",,
+30,"Entering a different password conformation displays an error for new password functionality",,,,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Open the 'Нова парола' link sent to the mail
+2. Enter a valid password in the 'Парола' field
+3. Enter a different password in the 'Потвърди' field
+4. Click on the 'Продължете' button
+","1. Link should be successfully opened and redirecting to a change password page
+2. 
+3. Password conformation should be the same as the password
+4. An error should be displayed
+","1. 
+2. test123
+3. 
+4. 
+",,,2,,"Login and Logout",,
+31,"Successful expiration of the password reset link",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open your mail
+2. Open the reset password email
+3. Open the 'Нова парола' link sent to the mail
+","1. 
+2. 
+3. An error message should be displayed
+","1. 
+2. 
+3. 
+",,,2,,"Login and Logout",,
+32,"Logout successfully",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Login to your profile
+2. Hover over the 'Изход' button on the top right corner of the page
+3. Click on the 'Изход' button
+","1. 
+2. Button should be highlighted when hovered over
+3. User should be successfully logout and a message should be displayed
+","1. 
+2. 
+3. 
+",,,2,,"Login and Logout",,
+33,"Search box is visible on the page and opens correctly",,"1. Open the website 'www.workout.bg'",,,high,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Navigate to the top of the page where the search box element is located
+2. Click on the search box icon
+","1. Search box should be visible for the user
+2. Search box should be clickable
+","1. 
+2. 
+",,,3,,"Search functionality",,
+34,"Search box accepts input from the user",,,,,high,undefined,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Click on the search box field and start typing
+","1. 
+2. Placeholder should be replaced by 'a'
+","1. 
+2. a
+",,,3,,"Search functionality",,
+35,"Search for a valid product in the search bar field",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Click on the search box field
+3. Enter a valid search term or product name in the search box
+4. Press Enter
+","1. 
+2. 
+3. A drop down menu should be displayed
+4. A new page with the desired products should be displayed
+","1. 
+2. 
+3. протеин
+4. 
+",,,3,,"Search functionality",,
+36,"Search for an invalid product in the search bar field",,,,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Click on the search box field
+3. Enter an invalid search term or product name in the search box
+","1. 
+2. 
+3. A message should be displayed
+","1. 
+2. 
+3. мазнинии
+",,,3,,"Search functionality",,
+37,"Search functionality works correctly when the search field is empty",,,,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Leave the search bar field empty
+3. Press Enter
+","1. 
+2. 
+3. A message should appear with no results displayed
+","1. 
+2. 
+3. 
+",,,3,,"Search functionality",,
+38,"Search for an unexisting product",,,,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Enter an unexisting search term or item name in the search box
+3. Press Enter
+","1. 
+2. 
+3. A message should be displayed
+","1. 
+2. телефон
+3. 
+",,,3,,"Search functionality",,
+39,"Search for an existing term with multiple words entered",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Enter two existing terms in the search bar field
+3. Press Enter
+","1. 
+2. 
+3. A new page with the desired results should be opened
+","1. 
+2. бета блокери
+3. 
+",,,3,,"Search functionality",,
+40,"Add a product to cart",,"1.Open the website 'www.workout.bg'
+2.User must be logged in",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on one of the sections in the nav bar
+2. Click on one of the displayed subcategories
+3. Select a product from the displayed options and click on it
+4. Select a desired quantity from the quantity field
+5. Locate the 'Купи' button and click on it
+","1. 
+2. 
+3. 
+4. 
+5. The product should be successfully added to the cart and a message should be displayed
+","1. Витамини и минерали
+2. Витамин А
+3. NATURAL FACTORS VITAMIN A 10 000 IU
+4. 1
+5. 
+",,,4,,"Shopping cart",,
+41,"Add a product to the cart with a quantity set to zero",,"1.Open the website 'www.workout.bg'
+2.User must be logged in",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Click on one of the sections in the nav bar
+2. Click on one of the displayed subcategories
+3. Select a product from the displayed options and click on it
+4. Locate the quantity field
+5. Set the quantity to zero
+","1. 
+2. 
+3. 
+4. 
+5. Miminum quantity should be set to 1 and the action shouldn't be successful
+","1. Витамини и минерали
+2. Витамин А
+3. NATURAL FACTORS VITAMIN A 10 000 IU
+4. 
+5. 0
+",,,4,,"Shopping cart",,
+44,"User is able to view an added to cart product",,"User must be logged in",,,high,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Navigate to the cart icon
+3. Hover over the cart icon
+4. Click on the 'Към кошницата' button from the drop-down menu
+","1. 
+2. 
+3. A drop down menu should be displayed
+4. User should be able to view the added to cart product together with its details
+","1. 
+2. 
+3. 
+4. 
+",,,4,,"Shopping cart",,
+45,"Increasing quantity of an added to cart product works as expected",,"1. Open the website 'www.workout.bg'
+2. User must be logged in
+3. A product shuld already be added to the cart",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Navigate to the cart icon
+2. Hover over the cart icon
+3. Click on the 'Към кошницата' button
+4. Increase the quantity of a product by clicking on the up arrow in the quantity field
+5. Click on the 'Обнови' button
+","1. 
+2. 
+3. 
+4. 
+5. A success message should be displayed and the quantity should be correctly updated
+","1. 
+2. 
+3. 
+4. +1
+5. 
+",,,4,,"Shopping cart",,
+46,"Decreasing quantity of an added to cart product works as expected",,"1. Open the website 'www.workout.bg'
+2. User must be logged in
+3. A product shuld already be added to the cart",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Navigate to the cart icon
+2. Hover over the cart icon
+3. Click on the 'Към кошницата' button
+4. Decrease the quantity of a product by clicking on the down arrow in the quantity field
+5. Click on the 'Обнови' button
+","1. 
+2. 
+3. 
+4. 
+5. A success message should be displayed and the quantity should be correctly updated
+","1. 
+2. 
+3. 
+4. -1
+5. 
+",,,4,,"Shopping cart",,
+47,"Entering value that exceeds the maximum range of an added to cart product works as expected",,"1. Open the website 'www.workout.bg'
+2. User must be logged in
+3. A product shuld already be added to the cart",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Navigate to the cart icon
+2. Hover over the cart icon
+3. Click on the 'Към кошницата' button
+4. Enter an exceeding the maximum range value
+5. Click on the 'Обнови' button
+","1. 
+2. 
+3. 
+4. 
+5. An error message should be displayed
+","1. 
+2. 
+3. 
+4. 1000
+5. 
+",,,4,,"Shopping cart",,
+48,"Total price calculation works as expected if the quntity of a product is increased by one",,"1. Open the website 'www.workout.bg'
+2. User must be logged in
+3. A product shuld already be added to the cart",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Navigate to the cart icon
+2. Hover over the cart icon
+3. Click on the 'Към кошницата' button
+4. Increase the quantity of a product by clicking on the up arrow in the quantity field
+5. Click on the 'Обнови' button
+","1. 
+2. 
+3. 
+4. 
+5. Total price should be correctly updated and a message should be displayed
+","1. 
+2. 
+3. 
+4. +1
+5. 
+",,,4,,"Shopping cart",,
+49,"Total price calculation works as expected if the quntity of a product is decreased by one",,"1. Open the website 'www.workout.bg'
+2. User must be logged in
+3. A product shuld already be added to the cart",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Navigate to the cart icon
+2. Hover over the cart icon
+3. Click on the 'Към кошницата' button
+4. Decrease the quantity of a product by clicking on the up arrow in the quantity field
+5. Click on the 'Обнови' button
+","1. 
+2. 
+3. 
+4. 
+5. Total price should be correctly updated and a message should be displayed
+","1. 
+2. 
+3. 
+4. -1
+5. 
+",,,4,,"Shopping cart",,
+50,"User is able to view more than one added to cart product",,"1. Open the website 'www.workout.bg'
+2. User must be logged in
+3. At least two product must be added to cart",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg
+2. Navigate to the cart icon
+3. Hover over the cart icon
+4. Click on the 'Към кошницата' button from the drop-down menu
+","1. 
+2. 
+3. A drop down menu should be displayed
+4. User should be able to view all the added in cart products together with their details
+","1. 
+2. 
+3. 
+4. 
+",,,4,,"Shopping cart",,
+51,"Added items are saved in the cart if the user logs out",,"1.Open the website 'www.workout.bg'
+2.User should be logged out",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Login using valid credentials
+2. Navigate to the cart icon
+3. Hover over the cart icon
+4. Click on the 'Към кошницата' button from the drop-down menu options
+","1. 
+2. 
+3. 
+4. User should be able to view all the added in the cart products together with their details
+","1. 
+2. 
+3. 
+4. 
+",,,4,,"Shopping cart",,
+52,"Add same product to cart twice functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Same product must be added twice to the cart",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Navigate to the cart icon
+2. Hover over the cart icon
+3. Click on the 'Към кошницата' button from the drop-down menu
+","1. 
+2. 
+3. Product should only appear once in the cart, with the total quantity and price calculated correctly
+","1. 
+2. 
+3. 
+",,,4,,"Shopping cart",,
+53,"Delete a product from cart",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Same product must be added twice to the cart",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Navigate to the cart icon
+2. Hover over the cart icon
+3. Click on the 'Към кошницата' button from the drop-down menu
+4. Click on the 'Премахни' button of a selected product
+","1. 
+2. 
+3. 
+4. Product should be successfully deleted and a success message should be displayed
+","1. 
+2. 
+3. 
+4. Kelp Extract 150mcg
+",,,4,,"Shopping cart",,
+42,"Quantity field arrows functionality work as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on one of the sections in the nav bar
+2. Click on one of the displayed subcategories
+3. Витамин А
+4. Select a product from the displayed options and click on it
+5. Locate the quantity field
+6. Click on the up arrow in the quantity field
+7. Click on the down arrow in the quantity field
+","1. 
+2. 
+3. 
+4. 
+5. The quantity field should be visible and editable
+6. Quantity value should increase by one
+7. Quantity value should decrease by one
+","1. Витамини и минерали
+2. 
+3. 
+4. NATURAL FACTORS VITAMIN A 10 000 IU
+5. 
+6. 
+7. 
+",,,5,,"Product page",,
+43,"Quantity field custom input value functionality work as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on one of the sections in the nav bar
+2. Click on one of the displayed subcategories
+3. Витамин А
+4. Select a product from the displayed options and click on it
+5. Locate the quantity field
+6. Enter a numeric value in the quantity field
+7. Click somewhere on the screen
+","1. 
+2. 
+3. 
+4. 
+5. The quantity field should be visible and editable
+6. 
+7. Quantity should be successfully changed and the total price is calculated correctly
+","1. Витамини и минерали
+2. 
+3. 
+4. NATURAL FACTORS VITAMIN A 10 000 IU
+5. 
+6. 2
+7. 
+",,,5,,"Product page",,
+76,"Quick order functionality for a selected product works as expected",,"1.Open the website 'www.workout.bg'",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on one of the categories in the nav bar
+2. Select a product from all the displayed products and click on it
+3. Locate the 'Бърза поръчка' form
+4. Enter a valid first name in the 'Име' field
+5. Enter a valid phone number in the 'Телефон' field
+6. Click on 'Поръчай' button
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. User should successfully ordered the product and a success message should be displayed
+","1. Витамини и минерали
+2. OSTROVIT 100% VIT&MIN
+3. 
+4. Svetoslava
+5. +35900238989
+6. 
+",,,5,,"Product page",,
+77,"Star rating functionality for a selected product works as expected",,"1.Open the website 'www.workout.bg'",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on one of the categories in the nav bar
+2. Select a product from all the displayed products and click on it
+3. Locate the star rating widget
+4. Hover over one of the 5 stars
+5. Click on the selected star
+","1. 
+2. 
+3. 
+4. Stars should turn yellow
+5. Average and total stars fields should be updated and a success message should be displayed
+","1. Витамини и минерали
+2. OSTROVIT 100% VIT&MIN
+3. 
+4. 5
+5. 
+",,,5,,"Product page",,
+78,"Write a comment functionality for a selected product works as expected",,"1.Open the website 'www.workout.bg'
+2.Select one of the categories in the nav bar and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Select a product from all the displayed products and click on it
+2. Locate the 'Напишете мнение' button and click on it
+3. Write a comment in the 'Вашият коментар' field
+4. Select a rating from the 'Оценка' radio button rating
+5. Check the reCAPTCHA checkbox
+6. Click on the 'Продължете' button
+","1. 
+2. The user should be navigated down to the 'Отзиви и мнения' tab and a unfilled form should be opened
+3. 
+4. 
+5. 
+6. Comment should be successfully added and a success message should be displayed
+","1. OSTROVIT 100% VIT&MIN
+2. 
+3. Невероятен продукт!
+4. 5
+5. 
+6. 
+",,,5,,"Product page",,
+79,"Tabs are opening correctly in the tablist of a selected product",,"1.Open the website 'www.workout.bg'
+2.Select one of the categories in the nav bar and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Select a product from all the displayed products and click on it
+2. Locate the tablist of the selected product
+3. Hover over all of the tabs in the tablist
+4. Click on all of the tabs
+","1. 
+2. 
+3. All of the tabs should be turning yellow when hovered over
+4. Tabs should be opening correctly and displaying the proper information
+","1. OSTROVIT 100% VIT&MIN
+2. 
+3. Описание, Състав, Отзиви и мнения, Кога се използва, Кой го използва, Защо се използва, Спортове
+4. 
+",,,5,,"Product page",,
+80,"Interaction between one opened tab and all the other tabs",,"1.Open the website 'www.workout.bg'
+2.Select one of the categories in the nav bar and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Select a product from all the displayed products and click on it
+2. Scroll down to the tablist of the selected product
+3. Select one of the tabs in the tablist and click on it
+","1. 
+2. 
+3. Information of the tab should be displayed and all other tabs should be closed
+","1. OSTROVIT 100% VIT&MIN
+2. 
+3. Описание
+",,,5,,"Product page",,
+81,"Categories hover state changes background to black",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Hover over all of the categories in the nav bar
+","1. 
+2. Categories background should turn black
+","1. 
+2. 
+",,,5,,"Product page",,
+82,"Drop-down menus are visible when selecting categories in the nav bar",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Hover over all of the categories in the nav bar
+","1. 
+2. Drop-down menus should be triggered when hovering over the categories
+","1. 
+2. 
+",,,5,,"Product page",,
+83,"Subcategories hover state changes background to black",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Hover over all of the subcategories of the main categories in the nav bar
+","1. 
+2. Subcategories background should turn black
+","1. 
+2. 
+",,,5,,"Product page",,
+84,"'Цена' filter tab can be toggled open and closed using the '+' and '-' buttons",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Locate the 'Филтър' tablist positioned on the left side of the page
+4. Click on the '+' icon of the 'Цена' tab
+5. Click on the '-' icon of the 'Цена' tab
+","1. 
+2. 
+3. 
+4. Price filter should be successfully opened
+5. Price filter should be successfully closed
+","1. 
+2. Витамини и минерали
+3. 
+4. 
+5. 
+",,,5,,"Product page",,
+85,"Price range slider works correctly when moved to the right",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Locate the 'Филтър' tablist positioned on the left side of the page
+4. Click on the '+' icon of the 'Цена' tab
+5. Start sliding the slider to the right until reaching the desired price range
+","1. 
+2. 
+3. 
+4. Price filter should be successfully opened
+5. Only the products in the desired price range should be displayed on the page
+","1. 
+2. Витамини и минерали
+3. 
+4. 
+5. 0-62
+",,,5,,"Product page",,
+86,"Sorting by ascending alphatabetical order works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the 'Подреждане по: Име(А-Я)' function from the sorting options
+","1. 
+2. 
+3. Products should be arranged in alphabetical order by their name from А-Я
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+87,"Sorting by descending alphabetical order works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the 'Подреждане по: Име(Я-А)' function from the sorting options
+","1. 
+2. 
+3. Products should be arranged in alphabetical order by their name from Я-А
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+88,"Sorting by ascending price order works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the 'Подреждане по: Цена (най-ниска > най-висока)' function from the sorting options
+","1. 
+2. 
+3. Products should be arranged in ascending price order
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+89,"Sorting by descending price order works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the 'Подреждане по: Цена (най-висока > най-ниска)' function from the sorting options
+","1. 
+2. 
+3. Products should be arranged in descending price order
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+90,"Sorting by ascending rating order works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the 'Подреждане по: Оценка (най-висока)' function from the sorting options
+","1. 
+2. 
+3. Products should be arranged in ascending rating order
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+91,"Sorting by descending rating order works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the 'Подреждане по: Оценка (най-ниска)' function from the sorting options
+","1. 
+2. 
+3. Products should be arranged in descending rating order
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+92,"Show by functionality displays the correct number of products per page by default",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Count the number of products displayed on the page
+","1. 
+2. 
+3. By default the number of products listed on ne page should be 24
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+93,"Show by functionality works as expected with medium value selected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the medium value of the 'Показване' drop-down menu
+4. Count the number of products displayed on the page
+","1. 
+2. 
+3. 
+4. The number of products listed on the page should be 50
+","1. 
+2. Витамини и минерали
+3. 50
+4. 
+",,,5,,"Product page",,
+94,"Show by functionality works as expected with maximum value selected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Select the maximum value of the 'Показване' drop-down menu
+4. Count the number of products displayed on the page
+","1. 
+2. 
+3. 
+4. The number of products listed on the page should be 100
+","1. 
+2. Витамини и минерали
+3. 100
+4. 
+",,,5,,"Product page",,
+95,"Pagination right arrow navigates to the next page",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Locate the pagination bar
+4. Click on the right arrow of the pagination bar
+","1. 
+2. 
+3. 
+4. User should be navigated to the next page
+","1. 
+2. Витамини и минерали
+3. 
+4. >
+",,,5,,"Product page",,
+96,"Pagination left arrow navigates to the next page",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Locate the pagination bar
+4. Click on the left arrow of the pagination bar
+","1. 
+2. 
+3. 
+4. User should be navigated to the previous page
+","1. 
+2. Витамини и минерали
+3. 
+4. <
+",,,5,,"Product page",,
+97,"Numeric page indicator works as expected",,,,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Select one of the categories in the navbar and click on it
+3. Locate the pagination bar
+4. Hover over one of the numbers from the number page indicator
+5. Click on the selected number
+","1. 
+2. 
+3. 
+4. Number should turn blue when hovered
+5. User should be navigated to the 5th page of the displayed products
+","1. 
+2. Витамини и минерали
+3. 
+4. 5
+5. 
+",,,5,,"Product page",,
+98,"Star rating functionality  for a selected category works as expected",,"1.Open the website 'www.workout.bg'",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on one of the categories in the nav bar
+2. Locate the star rating widget
+3. Hover over one of the 5 stars
+4. Click on the selected star
+","1. 
+2. 
+3. Stars should turn yellow
+4. Average and total stars fields should be updated
+","1. Витамини и минерали
+2. 
+3. 5
+4. 
+",,,5,,"Product page",,
+99,"Images of the listed products in a selected category are properly aligned",,"1.Open the website 'www.workout.bg'",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Click on one of the categories in the nav bar
+","1. 
+2. All the images of the listed products in the selected category are properly aligned
+","1. 
+2. Витамини и минерали
+",,,5,,"Product page",,
+100,"Images are enlarged when hovered on and a 'Купи' button is added on their bottoms",,"1.Open the website 'www.workout.bg'",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Open the website 'www.workout.bg'
+2. Click on one of the categories in the nav bar
+3. Hover over all of the listed products
+","1. 
+2. 
+3. Images should be enlarged and a button 'Купи' should become visible on the bottom of all the product cards
+","1. 
+2. Витамини и минерали
+3. 
+",,,5,,"Product page",,
+74,"Sections in 'Моят профил' page are properly aligned",,"1.Open the website 'www.workout.bg'
+2\. User must be logged in",,,high,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Hover over the 'Профил' button positioned in the top right corner
+2. Select the 'Редакция' option from the drop-down menu
+3. Check if all the section on the profile page are porperly aligned and ordered in categories
+","1. 
+2. 
+3. All the section should be properly aligned and there should be a category for each section
+","1. 
+2. 
+3. 
+",,,6,,"My profile page",,
+75,"All the sections in 'Моят профил' are clickable and  lead to their proper end points",,"1.Open the website 'www.workout.bg'
+2\. User must be logged in",,,high,normal,other,positive,is-not-automated,actual,no,unknown,classic,"1. Hover over the 'Профил' button positioned in the top right corner
+2. Select the 'Редакция' option from the drop-down menu
+3. Check if all of the sections are clickable
+4. Check if all of the sections navigate the user to their proper URL
+","1. 
+2. 
+3. User should be able to click on every section
+4. When clicked all of the section should open the correct pages
+","1. 
+2. 
+3. 
+4. 
+",,,6,,"My profile page",,
+54,"Edit first name functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Change the first name with a new one
+2. Leave the surname unchanged
+3. Leave the email unchanged
+4. Leave the phone number unchanged
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. First name should be successfully changed and a success message should be displayed
+","1. Svetoslav
+2. Stoyanova
+3. svetoslavatest123@abv.bg
+4. +13183442908
+5. 
+",,,7,6,"Edit profile functionality",,
+55,"Edit surname functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Leave the first name unchanged
+2. Change the surname with a new one
+3. Leave the email unchanged
+4. Leave the phone number unchanged
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. Surname should be successfully changed and a success message should be displayed
+","1. Svetoslava
+2. Stoyanov
+3. svetoslavatest123@abv.bg
+4. +13183442908
+5. 
+",,,7,6,"Edit profile functionality",,
+56,"Edit email functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Leave the first name unchanged
+2. Leave the surname field unchanged
+3. Change the email with a new one
+4. Leave the phone number unchanged
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. Email should be successfully changed and a success message should be displayed
+","1. Svetoslava
+2. Stoyanova
+3. svetoslavatest12@abv.bg
+4. +13183442908
+5. 
+",,,7,6,"Edit profile functionality",,
+57,"Edit phone number functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Leave the first name unchanged
+2. Leave the surname field unchanged
+3. Leave the email unchanged
+4. Change the phone number with a new one
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. Phone number should be successfully changed and a success message should be displayed
+","1. Svetoslava
+2. Stoyanova
+3. svetoslavatest123@abv.bg
+4. +13183442908
+5. 
+",,,7,6,"Edit profile functionality",,
+58,"Edit first name with an empty field displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the first name field empty
+2. Leave the surname field unchanged
+3. Leave the email unchanged
+4. Leave the phone number unchanged
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. An error message should be displayed
+","1. 
+2. Stoyanova
+3. svetoslavatest123@abv.bg
+4. +13183442908
+5. 
+",,,7,6,"Edit profile functionality",,
+59,"Edit surname with an empty field displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the first name unchanged
+2. Leave the surname field empty
+3. Leave the email unchanged
+4. Leave the phone number unchanged
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. An error message should be displayed
+","1. Svetoslava
+2. 
+3. svetoslavatest123@abv.bg
+4. +13183442908
+5. 
+",,,7,6,"Edit profile functionality",,
+60,"Edit email with an empty field displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the first name unchanged
+2. Leave the surname unchanged
+3. Leave the email field empty
+4. Leave the phone number unchanged
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. An error message should be displayed
+","1. Svetoslava
+2. Stoyanova
+3. 
+4. +13183442908
+5. 
+",,,7,6,"Edit profile functionality",,
+61,"Edit phone number with an empty field displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактиране на профила' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the first name unchanged
+2. Leave the surname unchanged
+3. Leave the email unchanged
+4. Leave the phone number field empty
+5. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. 
+5. An error message should be displayed
+","1. Svetoslava
+2. Stoyanova
+3. svetoslavatest123@abv.bg
+4. 
+5. 
+",,,7,6,"Edit profile functionality",,
+62,"Change password functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4.Select the 'Смяна на парола' section and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Enter a valid new password in the 'Парола' field
+2. Enter the same password in the 'Въведете отново' field
+3. Click on the 'Продължете' button
+","1. 
+2. 
+3. Password should be changed with a new one a success message should be displayed
+","1. test12
+2. test12
+3. 
+",,,8,6,"Change password functionality",,
+63,"Login with new password works as expected",,"1.Open the website 'www.workout.bg'",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Click on the profile login icon
+2. Enter a valid email
+3. Enter the cnahged password
+4. Click on the 'Влез' button
+","1. 
+2. 
+3. 
+4. User should be successfully logged in with the new password
+","1. 
+2. svetoslavatest123@abv.bg
+3. test12
+4. 
+",,,8,6,"Change password functionality",,
+64,"Change password with an empty field displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4.Select the 'Смяна на парола' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Leave the password field empty
+2. Enter a valid password conformation
+3. Click on 'Продължете' button
+","1. 
+2. 
+3. An error message should be displayed
+","1. 
+2. test12
+3. 
+",,,8,6,"Change password functionality",,
+65,"Change password conformation with an empty field displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4.Select the 'Смяна на парола' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid new password
+2. Leave the password conformation field empty
+3. Click on 'Продължете' button
+","1. 
+2. 
+3. An error message should be displayed
+","1. test12
+2. 
+3. 
+",,,8,6,"Change password functionality",,
+66,"Entering mismatched passwords displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4.Select the 'Смяна на парола' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a valid new password
+2. Enter a different password conformation
+3. Click on 'Продължете' button
+","1. 
+2. 
+3. An error message should be displayed
+","1. test12
+2. test1
+3. 
+",,,8,6,"Change password functionality",,
+67,"Entering short password displays an error",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4.Select the 'Смяна на парола' section and click on it",,,high,normal,functional,negative,is-not-automated,actual,no,unknown,classic,"1. Enter a password consisted of only one character
+2. Enter the same password in the password confromation field
+3. Click on 'Продължете' button
+","1. 
+2. 
+3. An error message should be displayed
+","1. t
+2. t
+3. 
+",,,8,6,"Change password functionality",,
+68,"Add a new address functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактирайте въведените адреси' section and click on it
+4\. User shouldn't have an added address 
+5.Click on the 'Нов адрес' button",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Enter a valid first name and surname
+2. Enter a valid address in the 'Адрес 1' field
+3. Enter a valid town in the 'Град' field
+4. Select a country from the 'Държава' drop-down menu
+5. Select a town from the 'Област / регион' drop-down menu
+6. Click on the 'Продължете'button
+","1. 
+2. 
+3. 
+4. 
+5. 
+6. Address should be successfully added and a success message should be displayed
+","1. Svetoslava Stoyanova
+2. Lulin 1
+3. Sofia
+4. България
+5. София град
+6. 
+",,,10,6,"Edit address functionality",,
+69,"Edit address functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактирайте въведените адреси' section and click on it
+4\. User should have an added address",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Select the added address and click on the 'Редактиране' button
+2. Leave the 'Собствено име','Фамилия', 'Адрес 1', 'Град', 'Държава', 'Област/Регион' fields unchanged
+3. Change the 'Адрес 1' field with a new one
+4. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. Change should be successful and a success message should be displayed
+","1. 
+2. Собствено име: Svetoslava
+Фамилия: Stoyanova
+Град: Sofia
+Държава: България
+Област/Регион: София град
+3. Lulin 2
+4. 
+",,,10,6,"Edit address functionality",,
+70,"Edit first name functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактирайте въведените адреси' section and click on it
+4\. User should have an added address",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Select the added address and click on the 'Редактиране' button
+2. Leave the 'Фамилия', 'Адрес 1', 'Град', 'Държава', 'Област/Регион' fields unchanged
+3. Change the 'Собствено име' field with a new name
+4. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. Change should be successful and a success message should be displayed
+","1. 
+2. Фамилия: Stoyanova
+Адрес 1: Lulin 1
+Град: Sofia
+Държава: България
+Област/Регион: София град
+3. Собствено име: Svetoslav
+4. 
+",,,10,6,"Edit address functionality",,
+71,"Edit town functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактирайте въведените адреси' section and click on it
+4\. User should have an added address",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Select the added address and click on the 'Редактиране' button
+2. Leave the Собствено име','Фамилия', 'Адрес 1', 'Държава', 'Област/Регион' fields unchanged
+3. Change the 'Град' field with a new one
+4. Click on the 'Продължете' button
+","1. 
+2. 
+3. 
+4. Change should be successful and a success message should be displayed
+","1. 
+2. Собствено име: Svetoslava
+Фамилия: Stoyanova
+Адрес 1: Lulin 1
+Държава: България
+Област/Регион: София град
+3. Plovdiv
+4. 
+",,,10,6,"Edit address functionality",,
+72,"Edit country functionality works as expected",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактирайте въведените адреси' section and click on it
+4\. User should have an added address",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. Select the added address and click on the 'Редактиране' button
+2. Leave the Собствено име','Фамилия', 'Адрес 1', 'Град', fields unchanged
+3. Change the 'Държава' field with a new one
+4. Select a new region from the 'Област/Регион' drop-down menu
+5. Click on 'Продължете' button
+","1. 
+2. 
+3. Област/Регион' field should display a new drop-down options for the selected country
+4. 
+5. Change should be successful and a success message should be displayed
+","1. 
+2. Собствено име: Svetoslava
+Фамилия: Stoyanova
+Адрес 1: Lulin 1
+Град: Sofia
+3. Sweden
+4. 
+5. 
+",,,10,6,"Edit address functionality",,
+73,"Delete an added address from the 'СПИСЪК С АДРЕСИ' page",,"1.Open the website 'www.workout.bg'
+2.User must be logged in
+3.Click on the profile icon
+4\. Select the 'Редактирайте въведените адреси' section and click on it",,,high,normal,functional,positive,is-not-automated,actual,no,unknown,classic,"1. User should have an added address
+2. Select an added address from the displayed options
+3. Click on the 'Изтриване' button
+","1. 
+2. 
+3. Address should be successfully deleted from the adresses list and a succes message should be displayed
+","1. 
+2. 
+3. 
+",,,10,6,"Edit address functionality",,
